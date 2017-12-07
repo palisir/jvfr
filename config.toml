@@ -1,0 +1,18 @@
+baseURL = "http://example.org/"
+title = "Jeux vidéo en français"
+theme = "jvfr"
+
+enableRobotsTXT = true
+languageCode = "fr"
+defaultContentLanguage = "fr"
+
+googleAnalytics = "125236502"
+disqusShortname = "jeuxvideofrancais"
+
+
+author = "palisir"
+GithubUser = "palisir"
+
+[params]
+logo = "img/logo128.png"
+logoFull = "img/logo.png"
