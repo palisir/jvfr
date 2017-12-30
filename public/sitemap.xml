@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://jvfr.mokay.fr/posts/regarder-des-chiens/</loc>
+    <lastmod>2017-12-05T21:54:54-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jvfr.mokay.fr/mentions-legales/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jvfr.mokay.fr/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jvfr.mokay.fr/</loc>
+    <lastmod>2017-12-05T21:54:54-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jvfr.mokay.fr/posts/</loc>
+    <lastmod>2017-12-05T21:54:54-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jvfr.mokay.fr/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
