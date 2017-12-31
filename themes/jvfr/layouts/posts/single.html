@@ -4,7 +4,7 @@
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post" data-slug="{{ .File.BaseFileName }}">
         <img src="/post-img/{{ .File.BaseFileName }}.jpg" class="cover-img" data-base-url="/post-img/{{ .File.BaseFileName }}.jpg"/>
-        <span class="original-toggle visible-md visible-lg">Original : <a href="{{ .Params.Refurl }}">{{ .Params.Originaltitle }}<i class="fa fa-external-link" aria-hidden="true"></i></a></span>
+        <span class="original-toggle visible-md visible-lg">Original : <a href="{{ .Params.Refurl }}" target="_blank">{{ .Params.Originaltitle }}<i class="fa fa-external-link" aria-hidden="true"></i></a></span>
         <div class="post-content">
           {{ .Content }}
         </div>
