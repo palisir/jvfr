@@ -2,3 +2,28 @@
 If you want to include any custom html just before </head>, put it in /layouts/head_custom.html
 Do not put anything in this file - it's only here so that hugo won't throw an error if /layouts/head_custom.html doesn't exist.
 -->
+
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#ffffff",
+      "text": "#000000"
+    },
+    "button": {
+      "background": "#000000"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "content": {
+    "message": "En cliquant sur OK ou en poursuivant la navigation sur ce site, vous acceptez les cookies nécessaires au bon fonctionnement de celui-ci.",
+    "dismiss": "OK",
+    "link": "Plus d'info",
+    "href": "/mentions-legales"
+  }
+})});
+</script>

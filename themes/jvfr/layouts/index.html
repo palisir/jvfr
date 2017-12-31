@@ -14,7 +14,10 @@
             <article class="post-preview" data-slug="{{ .File.BaseFileName }}">
               <h2>{{ .Title }}</h2>
               <img src="post-img/{{ .File.BaseFileName }}.jpg" class="cover-img" data-base-url="post-img/{{ .File.BaseFileName }}.jpg"/>
-              <span class="original-toggle">Original</span>
+              <span class="original-toggle">Voir original</span>
+              <div class="post-content">
+                {{ .Content }}
+              </div>
             </article>
           {{ end }}
         </div>

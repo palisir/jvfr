@@ -144,21 +144,21 @@ var main = {
 document.addEventListener('DOMContentLoaded', main.init);
 
 $(document).ready(function(){
-  $('.original-toggle').hover(
+  $('.original-toggle, .cover-img').hover(
     function(){showOriginalCover(this)},
     function(){hideOriginalCover(this)}
   );
 });
 
 function showOriginalCover(span){
-  var coverImgTag = $(span).siblings('.cover-img').first();
+  var coverImgTag = $(span).parent('.post-preview').children('.cover-img').first();
   var slug = $(span).parent('article').data('slug');
   var originalCoverUrl = "post-img/" + slug + "-original.jpg";
   $(coverImgTag).attr('src', originalCoverUrl);
 }
 
 function hideOriginalCover(span){
-  var coverImgTag = $(span).siblings('.cover-img').first();
+  var coverImgTag = $(span).parent('.post-preview').children('.cover-img').first();
   var baseUrl = $(coverImgTag).data('baseUrl');
   $(coverImgTag).attr('src', baseUrl);
 }

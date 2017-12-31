@@ -12,3 +12,4 @@ Les services suivants, auxquels ce site a recours, utilisent des cookies :
 
 * [Disqus](https://help.disqus.com/customer/portal/articles/466235-use-of-cookies)
 * [Google Analytics](https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage)
+* [Programme Partenaires Amazon](https://partenaires.amazon.fr/)
