@@ -5,7 +5,7 @@ body {
   font-size: 18px;
   color: #404040;
   position: relative;
-  background: #FFF;
+  background: #FAFAFA;
   display: flex;
   flex-flow: column;
   height: 100vh;
@@ -310,15 +310,27 @@ footer .theme-by {
 .post-preview .original-toggle,
 .blog-post .original-toggle{
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 1.2em;
+  font-size: 1em;
   display: inline-block;
   margin-top: 10px;
   cursor: default;
   outline: none;
 }
-.post-preview .original-toggle:focus,
-.blog-post .original-toggle:focus{
-  outline: none;
+
+.post-preview .original-toggle a i,
+.blog-post .original-toggle a i{
+  color: #000000;
+  vertical-align: top;
+  padding-top: 0.3em;
+  padding-left: 0.5em;
+  font-size: 0.7em;
+}
+
+.post-preview .original-toggle a:hover,
+.post-preview .original-toggle a:active,
+.blog-post .original-toggle a:hover,
+.blog-post .original-toggle a:active{
+  color: #008AFF;
 }
 
 .post-preview .post-content p,
@@ -357,7 +369,6 @@ footer .theme-by {
 .post-preview a:focus,
 .post-preview a:hover {
   text-decoration: none;
-  color: #008AFF;
 }
 
 .post-preview .post-title {
