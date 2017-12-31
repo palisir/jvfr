@@ -148,11 +148,11 @@ $(document).ready(function(){
     function(){showOriginalCover(this)},
     function(){hideOriginalCover(this)}
   );
-  $('.cover-img').on('touchstart', function(e){
+  $('body:not(.home) .cover-img').on('touchstart', function(e){
     e.preventDefault();
     showOriginalCover(this);
   });
-  $('.cover-img').on('touchend', function(e){
+  $('body:not(.home) .cover-img').on('touchend', function(e){
     e.preventDefault();
     hideOriginalCover(this)
   });
