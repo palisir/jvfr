@@ -1,0 +1,38 @@
+{{ define "main" }}
+  <div role="main" class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        {{ with .Content }}
+          <div class="well">
+            {{.}}
+          </div>
+        {{ end }}
+
+        <div class="posts-list">
+          {{ $pag := .Paginate (.Data.Pages) }}
+          {{ range $pag.Pages }}
+            <article class="post-preview" data-slug="{{ .File.BaseFileName }}">
+              <img src="post-img/{{ .File.BaseFileName }}.jpg" class="cover-img" data-base-url="post-img/{{ .File.BaseFileName }}.jpg"/>
+              <span class="original-toggle">Original</span>
+            </article>
+          {{ end }}
+        </div>
+
+        {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+          <ul class="pager main-pager">
+            {{ if .Paginator.HasPrev }}
+              <li class="previous">
+                <a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}/">&larr; {{ i18n "newerPosts" }}</a>
+              </li>
+            {{ end }}
+            {{ if .Paginator.HasNext }}
+              <li class="next">
+                <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}/">{{ i18n "olderPosts" }} &rarr;</a>
+              </li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+{{ end }}

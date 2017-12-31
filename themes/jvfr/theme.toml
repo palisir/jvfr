@@ -1,0 +1,14 @@
+name = "JVFR"
+license = "MIT"
+description = "Thème pour JVFR"
+min_version = 0.17
+
+[author]
+    name = "palisir"
+    homepage = "https://mokay.fr"
+
+# If Porting existing theme
+[original]
+    author =  "halogenica"
+    homepage = "https://themes.gohugo.io/beautifulhugo/"
+    repo = "https://github.com/halogenica/beautifulhugo"
