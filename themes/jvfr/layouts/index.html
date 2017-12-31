@@ -12,10 +12,12 @@
           {{ $pag := .Paginate (.Data.Pages) }}
           {{ range $pag.Pages }}
             <article class="post-preview" data-slug="{{ .File.BaseFileName }}">
-              <h2>{{ .Title }}</h2>
-              <img src="post-img/{{ .File.BaseFileName }}.jpg" class="cover-img" data-base-url="post-img/{{ .File.BaseFileName }}.jpg"/>
-              <span class="original-toggle">Voir original</span>
-              <div class="post-content">
+              <a href="{{ .Permalink }}">
+                <h2>{{ .Title }}</h2>
+                <img src="/post-img/{{ .File.BaseFileName }}.jpg" class="cover-img" data-base-url="/post-img/{{ .File.BaseFileName }}.jpg"/>
+              </a>
+              <span class="original-toggle visible-md visible-lg">Voir original</span>
+              <div class="post-content col-sm-12">
                 {{ .Content }}
               </div>
             </article>

@@ -2,8 +2,12 @@
 <div class="container" role="main">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <article role="main" class="blog-post">
-        {{ .Content }}
+      <article role="main" class="blog-post" data-slug="{{ .File.BaseFileName }}">
+        <img src="/post-img/{{ .File.BaseFileName }}.jpg" class="cover-img" data-base-url="/post-img/{{ .File.BaseFileName }}.jpg"/>
+        <span class="original-toggle visible-md visible-lg">Voir original</span>
+        <div class="post-content col-sm-12">
+          {{ .Content }}
+        </div>
       </article>
 
       {{ if (.Params.comments) | or (and (or (not (isset .Params "comments")) (eq .Params.comments nil)) (.Site.Params.comments)) }}

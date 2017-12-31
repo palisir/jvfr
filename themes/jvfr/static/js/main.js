@@ -148,17 +148,25 @@ $(document).ready(function(){
     function(){showOriginalCover(this)},
     function(){hideOriginalCover(this)}
   );
+  $('.cover-img').on('touchstart', function(e){
+    e.preventDefault();
+    showOriginalCover(this);
+  });
+  $('.cover-img').on('touchend', function(e){
+    e.preventDefault();
+    hideOriginalCover(this)
+  });
 });
 
-function showOriginalCover(span){
-  var coverImgTag = $(span).parent('.post-preview').children('.cover-img').first();
-  var slug = $(span).parent('article').data('slug');
-  var originalCoverUrl = "post-img/" + slug + "-original.jpg";
+function showOriginalCover(trigger){
+  var coverImgTag = $(trigger).parents('article').find('.cover-img').first();
+  var slug = $(trigger).parents('article').data('slug');
+  var originalCoverUrl = "/post-img/" + slug + "-original.jpg";
   $(coverImgTag).attr('src', originalCoverUrl);
 }
 
-function hideOriginalCover(span){
-  var coverImgTag = $(span).parent('.post-preview').children('.cover-img').first();
-  var baseUrl = $(coverImgTag).data('baseUrl');
+function hideOriginalCover(trigger){
+  var coverImgTag = $(trigger).parents('article').find('.cover-img').first();
+  var baseUrl = $(coverImgTag).data('base-url');
   $(coverImgTag).attr('src', baseUrl);
 }
