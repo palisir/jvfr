@@ -304,8 +304,7 @@ footer .theme-by {
 /* --- Post preview --- */
 
 .post-preview {
-  padding: 20px 0;
-  border-bottom: 1px solid #eee;
+  padding: 15px 0 50px;
 }
 
 .post-preview .original-toggle,
@@ -350,10 +349,6 @@ footer .theme-by {
   }
 }
 
-.post-preview:last-child {
-  border-bottom: 0;
-}
-
 .post-preview a {
   text-decoration: none;
   color: #404040;
@@ -362,7 +357,7 @@ footer .theme-by {
 .post-preview a:focus,
 .post-preview a:hover {
   text-decoration: none;
-  color: #0085a1;
+  color: #008AFF;
 }
 
 .post-preview .post-title {
