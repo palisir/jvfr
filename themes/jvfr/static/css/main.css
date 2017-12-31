@@ -308,6 +308,10 @@ footer .theme-by {
   border-bottom: 1px solid #eee;
 }
 
+.post-preview h2{
+  font-weight: normal;
+}
+
 .post-preview .original-toggle{
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.2em;

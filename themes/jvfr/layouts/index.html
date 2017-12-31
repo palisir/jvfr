@@ -12,6 +12,7 @@
           {{ $pag := .Paginate (.Data.Pages) }}
           {{ range $pag.Pages }}
             <article class="post-preview" data-slug="{{ .File.BaseFileName }}">
+              <h2>{{ .Title }}</h2>
               <img src="post-img/{{ .File.BaseFileName }}.jpg" class="cover-img" data-base-url="post-img/{{ .File.BaseFileName }}.jpg"/>
               <span class="original-toggle">Original</span>
             </article>

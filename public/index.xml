@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jeux vidéo en français</title>
-    <link>https://jvfr.mokay.fr/</link>
+    <link>https://jeuxvideofrancais.netlify.com/</link>
     <description>Recent content on Jeux vidéo en français</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     <lastBuildDate>Tue, 05 Dec 2017 21:54:54 -0500</lastBuildDate>
     
-	<atom:link href="https://jvfr.mokay.fr/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeuxvideofrancais.netlify.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title></title>
-      <link>https://jvfr.mokay.fr/posts/regarder-des-chiens/</link>
+      <title>Regarder Des Chiens</title>
+      <link>https://jeuxvideofrancais.netlify.com/posts/regarder-des-chiens/</link>
       <pubDate>Tue, 05 Dec 2017 21:54:54 -0500</pubDate>
       
-      <guid>https://jvfr.mokay.fr/posts/regarder-des-chiens/</guid>
+      <guid>https://jeuxvideofrancais.netlify.com/posts/regarder-des-chiens/</guid>
       <description></description>
     </item>
     
