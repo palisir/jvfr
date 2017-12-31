@@ -311,9 +311,28 @@ footer .theme-by {
 .post-preview .original-toggle{
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.2em;
-  font-weight: bold;
   display: inline-block;
-  margin-top: 5px;
+  margin-top: 10px;
+  cursor: default;
+}
+
+.post-preview .post-content p{
+  margin-top: 10px;
+}
+
+.post-preview .post-content a{
+  text-decoration: underline;
+  font-family: sans-serif;
+  color: #008AFF;
+}
+
+.post-preview .post-content .fa-external-link{
+  font-size: 0.7em;
+  color: black;
+  font-weight: bold;
+  vertical-align: top;
+  padding-top: 0.5em;
+  padding-left: 0.5em;
 }
 
 @media only screen and (min-width: 768px) {
