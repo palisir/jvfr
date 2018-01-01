@@ -9,10 +9,8 @@ defaultContentLanguage = "fr"
 googleAnalytics = "125236502"
 disqusShortname = "jeuxvideofrancais"
 
-
-author = "palisir"
-GithubUser = "palisir"
-
 [params]
 logo = "img/logo128.png"
 logoFull = "img/logo.png"
+description = "Jeux vidéo en français est un site proposant des traductions de jaquettes de jeux vidéo dans la langue française."
+author = "palisir"
