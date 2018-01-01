@@ -13,8 +13,8 @@
           {{ range $pag.Pages }}
             <article class="post-preview" data-slug="{{ .File.BaseFileName }}">
               <a href="{{ .Permalink }}">
-                <h2>{{ .Title }}</h2>
                 <img src="/post-img/{{ .File.BaseFileName }}.jpg" class="cover-img" data-base-url="/post-img/{{ .File.BaseFileName }}.jpg"/>
+                <h2>{{ .Title }}</h2>
               </a>
               <span class="original-toggle visible-md visible-lg">Original : <a href="{{ .Params.Refurl }}" target="_blank">{{ .Params.Originaltitle }}<i class="fa fa-external-link" aria-hidden="true"></i></a></span>
               <div class="post-content">

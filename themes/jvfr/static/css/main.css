@@ -307,6 +307,21 @@ footer .theme-by {
   padding: 15px 0 50px;
 }
 
+.post-preview img{
+  width: 100%;
+  height: auto;
+}
+
+.post-preview h2{
+  font-size: 1.4em;
+  font-family: inherit;
+}
+
+header.header-section h1{
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-weight: bold;
+}
+
 .post-preview .original-toggle,
 .blog-post .original-toggle{
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
