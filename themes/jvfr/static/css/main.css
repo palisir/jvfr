@@ -317,7 +317,7 @@ footer .theme-by {
   font-family: inherit;
 }
 
-header.header-section h1{
+body:not(.home) header.header-section h1{
   font-family: 'Lora', 'Times New Roman', serif;
   font-weight: bold;
 }
