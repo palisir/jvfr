@@ -6,7 +6,6 @@ enableRobotsTXT = true
 languageCode = "fr"
 defaultContentLanguage = "fr"
 
-googleAnalytics = "125236502"
 disqusShortname = "jeuxvideofrancais"
 
 [params]
