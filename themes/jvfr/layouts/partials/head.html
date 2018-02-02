@@ -30,8 +30,8 @@
   <meta name="twitter:image" content="{{ .Site.Params.logoSquare | absURL }}" />
   <meta name="twitter:description" content="{{ . | truncate 200 }}">
 {{- else -}}
-  <meta property="og:image" content="/post-img/{{ .File.BaseFileName }}.jpg" />
-  <meta name="twitter:image" content="/post-img/{{ .File.BaseFileName }}.jpg" />
+  <meta property="og:image" content="{{ .Site.BaseURL }}post-img/{{ .File.BaseFileName }}.jpg" />
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}post-img/{{ .File.BaseFileName }}.jpg" />
   <meta name="twitter:description" content="{{ .Content }}">
 {{- end -}}
   <meta name="twitter:creator" content="@paulalisir" />
