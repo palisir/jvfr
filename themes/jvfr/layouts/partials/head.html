@@ -24,10 +24,10 @@
   <meta name="theme-color" content="#0033ff">
 
 <!-- Social Media Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
 {{- if .IsNode -}}
   <meta property="og:image" content="{{ .Site.Params.logoSquare | absURL }}" />
   <meta name="twitter:image" content="{{ .Site.Params.logoSquare | absURL }}" />
-  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:description" content="{{ . | truncate 200 }}">
 {{- else -}}
   <meta property="og:image" content="/post-img/{{ .File.BaseFileName }}.jpg" />
