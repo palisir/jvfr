@@ -25,14 +25,17 @@
   <meta name="theme-color" content="#0033ff">
 
 <!-- Social Media Tags -->
-
+{{- if .IsNode -}}
   <meta property="og:image" content="{{ .Site.Params.logoSquare | absURL }}" />
   <meta name="twitter:image" content="{{ .Site.Params.logoSquare | absURL }}" />
+{{- else -}}
+  <meta property="og:image" content="/post-img/{{ .File.BaseFileName }}.jpg" />
+  <meta name="twitter:image" content="/post-img/{{ .File.BaseFileName }}.jpg" />
+{{- end -}}
 
   <meta name="twitter:card" content="summary" />
 {{- with .Site.Author.twitter }}
-  <meta name="twitter:site" content="@{{ . }}" />
-  <meta name="twitter:creator" content="@{{ . }}" />
+  <meta name="twitter:creator" content="@paulalisir" />
 {{- end }}
 {{- with .Site.Params.fb_app_id }}
   <meta property="fb:app_id" content="{{ . }}" />
