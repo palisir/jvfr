@@ -11,7 +11,6 @@
 {{- with .Site.Params.Description | default .Params.subtitle | default .Summary }}
   <meta name="description" content="{{ . }}">
   <meta property="og:description" content="{{ . }}">
-  <meta name="twitter:description" content="{{ . | truncate 200 }}">
 {{- end }}
   <meta name="author" content="{{ .Site.Author.name }}"/>
 
@@ -29,9 +28,11 @@
   <meta property="og:image" content="{{ .Site.Params.logoSquare | absURL }}" />
   <meta name="twitter:image" content="{{ .Site.Params.logoSquare | absURL }}" />
   <meta name="twitter:card" content="summary" />
+  <meta name="twitter:description" content="{{ . | truncate 200 }}">
 {{- else -}}
   <meta property="og:image" content="/post-img/{{ .File.BaseFileName }}.jpg" />
   <meta name="twitter:image" content="/post-img/{{ .File.BaseFileName }}.jpg" />
+  <meta name="twitter:description" content="{{ .Content }}">
 {{- end -}}
   <meta name="twitter:creator" content="@paulalisir" />
 {{- with .Site.Params.fb_app_id }}
