@@ -4,4 +4,4 @@
   HUGO_VERSION = "0.31.1"
   command = "hugo --buildDrafts --buildFuture"
 [context.next.environment]
-  HUGO_BASEURL = "https://jeuxvideofrancais.mokay.fr/"
+  HUGO_BASEURL = "https://jeuxvideofrancais.netlify.com/"

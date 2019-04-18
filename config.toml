@@ -1,4 +1,4 @@
-baseURL = "https://jeuxvideofrancais.mokay.fr/"
+baseURL = "https://jeuxvideofrancais.netlify.com/"
 title = "Jeux vidéo en français"
 theme = "jvfr"
 
