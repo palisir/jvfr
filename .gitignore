@@ -1,4 +1,5 @@
 /public/*
+!/public/_redirects
 
 # Windows image file caches
 Thumbs.db
