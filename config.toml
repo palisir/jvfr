@@ -1,12 +1,10 @@
-baseURL = "https://jeuxvideofrancais.mokay.fr/"
+baseURL = "https://jeuxvideofrancais.bid/"
 title = "Jeux vidéo en français"
 theme = "jvfr"
 
 enableRobotsTXT = true
 languageCode = "fr"
 defaultContentLanguage = "fr"
-
-disqusShortname = "jeuxvideofrancais"
 
 [params]
 logo = "img/logo128.png"
