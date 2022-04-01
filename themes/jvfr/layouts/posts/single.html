@@ -21,4 +21,14 @@
     </div>
   </div>
 </div>
+<script>
+  $('body:not(.home) .cover-img').on('touchstart', function(e){
+    e.preventDefault();
+    showOriginalCover(this);
+  });
+  $('body:not(.home) .cover-img').on('touchend', function(e){
+    e.preventDefault();
+    hideOriginalCover(this)
+  });
+</script>
 {{ end }}

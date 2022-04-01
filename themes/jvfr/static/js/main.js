@@ -143,29 +143,43 @@ var main = {
 
 document.addEventListener('DOMContentLoaded', main.init);
 
-$(document).ready(function(){
-  $('.original-toggle, .cover-img').hover(
+$(document).ready(() => {
+  const firstLoadCovers = $('.original-toggle, .cover-img');
+  setOriginalCoverEvents(firstLoadCovers);
+
+  if(document.getElementsByClassName('posts-list')){ setCoverObserver(); }
+
+});
+
+const setCoverObserver = () => {
+  const coverListObserverCallback = (mutationsList, observer) => {
+    const coverList = Array.from(mutationsList[0].addedNodes).map((post) => {
+      return Array.from(post.querySelectorAll('.original-toggle, .cover-img'))
+    }).flat();
+    setOriginalCoverEvents(coverList);
+  };
+  const coverListObserver = new MutationObserver(coverListObserverCallback);
+  coverListObserver.observe(
+    document.getElementsByClassName('posts-list')[0],
+    { attributes: true, childList: true, subtree: true }
+  );
+}
+
+const setOriginalCoverEvents = (coverList) => {
+  $(coverList).hover(
     function(){showOriginalCover(this)},
     function(){hideOriginalCover(this)}
   );
-  $('body:not(.home) .cover-img').on('touchstart', function(e){
-    e.preventDefault();
-    showOriginalCover(this);
-  });
-  $('body:not(.home) .cover-img').on('touchend', function(e){
-    e.preventDefault();
-    hideOriginalCover(this)
-  });
-});
+}
 
-function showOriginalCover(trigger){
+const showOriginalCover = (trigger) => {
   var coverImgTag = $(trigger).parents('article').find('.cover-img').first();
   var slug = $(trigger).parents('article').data('slug');
   var originalCoverUrl = "/post-img/" + slug + "-original.jpg";
   $(coverImgTag).attr('src', originalCoverUrl);
 }
 
-function hideOriginalCover(trigger){
+const hideOriginalCover = (trigger) => {
   var coverImgTag = $(trigger).parents('article').find('.cover-img').first();
   var baseUrl = $(coverImgTag).data('base-url');
   $(coverImgTag).attr('src', baseUrl);
