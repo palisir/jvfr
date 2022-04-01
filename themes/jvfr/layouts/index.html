@@ -8,7 +8,7 @@
           </div>
         {{ end }}
 
-        <div class="posts-list">
+        <div class="posts-list" data-infinite-scroll='{ "path": ".pagination__next", "append": ".post-preview", "history": false, "hideNav": ".main-pager" }'>
           {{ $pag := .Paginate (.Data.Pages) }}
           {{ range $pag.Pages }}
             <article class="post-preview" data-slug="{{ .File.BaseFileName }}">
@@ -33,7 +33,7 @@
             {{ end }}
             {{ if .Paginator.HasNext }}
               <li class="next">
-                <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}/">{{ i18n "olderPosts" }} &rarr;</a>
+                <a class="pagination__next" href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}/">{{ i18n "olderPosts" }} &rarr;</a>
               </li>
             {{ end }}
           </ul>
