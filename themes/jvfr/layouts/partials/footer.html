@@ -4,16 +4,16 @@
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <ul class="list-inline text-center footer-links">
           {{ range .Site.Data.beautifulhugo.social.social_icons }}
-            {{- if isset $.Site.Author .id }}
-              <li>
-                <a href="{{ printf .url (index $.Site.Author .id) }}" title="{{ .title }}">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa {{ .icon }} fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-            {{- end -}}
+          {{- if isset $.Site.Author .id }}
+          <li>
+            <a href="{{ printf .url (index $.Site.Author .id) }}" title="{{ .title }}">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa {{ .icon }} fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {{- end -}}
           {{ end }}
           {{ if .Site.Params.rss }}
           <li>
@@ -29,31 +29,36 @@
 
         <!-- Please don't remove this, keep my open source work credited :) -->
         <p class="credits theme-by text-muted">
-          <a href="/contact">Contact</a> • <a href="/mentions-legales">Mentions légales</a> • {{ i18n "poweredBy" . | safeHTML }}
+          <a href="/contact">Contact</a> • <a href="/mentions-legales">Mentions légales</a> • {{ i18n "poweredBy" . |
+          safeHTML }}
         </p>
       </div>
     </div>
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"
+  integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"
+  integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
-<script src="{{ "js/main.js" | absURL }}"></script>
+<script src='{{ "js/main.js" | absURL }}'></script>
 {{- if .Site.Params.staticman }}
-<script src="{{ "js/staticman.js" | absURL }}"></script>
+<script src='{{ "js/staticman.js" | absURL }}'></script>
 {{- end }}
 {{- if (not ( .Site.Params.UseChroma )) }}
-<script src="{{ "js/highlight.min.js" | absURL }}"></script>
+<script src='{{ "js/highlight.min.js" | absURL }}'></script>
 <script> hljs.initHighlightingOnLoad(); </script>
 {{- end -}}
 <script> renderMathInElement(document.body); </script>
 <!-- Google Custom Search Engine -->
 {{ if .Site.Params.gcse }}
 <script>
-  (function() {
+  (function () {
     var cx = '{{ .Site.Params.gcse }}';
     var gcse = document.createElement('script');
     gcse.type = 'text/javascript';
